@@ -1,24 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaHome, FaInfoCircle, FaTools, FaBlogger, FaPhoneAlt, FaCalendarCheck } from "react-icons/fa";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <Link href="/">
+          <FaHome className="mr-1" /> Home
+        </Link>
       </li>
       <li>
-        <Link href="/about">About</Link>
+        <Link href="/about">
+          <FaInfoCircle className="mr-1" /> About
+        </Link>
       </li>
       <li>
-        <Link href="/services">Services</Link>
+        <Link href="/services">
+          <FaTools className="mr-1" /> Services
+        </Link>
       </li>
       <li>
-        <Link href="/blog">Blog</Link>
+        <Link href="/blog">
+          <FaBlogger className="mr-1" /> Blog
+        </Link>
       </li>
       <li>
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact">
+          <FaPhoneAlt className="mr-1" /> Contact
+        </Link>
       </li>
     </>
   );
@@ -52,14 +63,17 @@ const Navbar = () => {
             </ul>
           </div>
           <Link href="/" className="btn btn-ghost text-xl hover:btn-outline btn-white">
-            <Image src={'/assets/AutoCurex.png'} width={150} height={200}/>
+            <Image src={'/assets/AutoCurex.png'} width={150} height={200} alt="AutoCurex Logo" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn border-[#FF3811] text-[#FF3811] border rounded">Appointment</a>
+          <button className="btn border-[#FF3811] text-[#FF3811] border rounded">
+            <FaCalendarCheck className="mr-2" />
+            Appointment
+          </button>
         </div>
       </div>
     </div>
