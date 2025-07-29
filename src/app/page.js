@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Services from "./Components/Services";
 
 export default function Home() {
   return (
-    <h1>Hello Auto Curex</h1>
+    <Services/>
   );
 }
