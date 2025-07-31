@@ -1,4 +1,6 @@
 
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebookF,
@@ -16,7 +18,9 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">AutoCurex</h2>
+          <Link href="/" className="btn btn-ghost text-xl hover:btn-outline mb-5 btn-white">
+                      <Image src={'/assets/AutoCurex.png'} width={150} height={200} alt="AutoCurex Logo" />
+                    </Link>
           <p>
             Your trusted car service partner for oil changes, diagnostics,
             repairs, and more. Drive safe, drive smart with AutoCurex.
