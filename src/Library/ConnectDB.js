@@ -1,5 +1,8 @@
 
-import { MongoClient, ServerApiVersion } from "mongodb"
+import { MongoClient, ServerApiVersion } from "mongodb";
+export const collectionNamesObj ={
+  servicesCollection:"Services"
+}
 export default function ConnectDB (collectionName){
     const uri = process.env.Mongo_URI
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version

@@ -1,14 +1,15 @@
-import ConnectDB from "@/Library/ConnectDB";
+import ConnectDB, { collectionNamesObj } from "@/Library/ConnectDB";
+import Link from "next/link";
 import React from "react";
 import { GrLinkNext } from "react-icons/gr";
 
 
 const Services = async() => {
-    const serviceCollection= ConnectDB('Services')
+    const serviceCollection= ConnectDB(collectionNamesObj.servicesCollection)
   const data = await serviceCollection.find({}).toArray()
 
   return (
-    <div className="mx-24 py-10">
+    <div className=" py-10 mx-auto w-[1140px] h-[600px]">
       <h6 className="text-[#FF3811] font-bold text-center">Service</h6>
       <h1 className="text-4xl font-bold text-center">Our Service Area</h1>
       <p className="text-center">
@@ -24,7 +25,7 @@ const Services = async() => {
             <img
               src={item.img}
               alt={item.title}
-              className="w-full h-90 rounded-2xl object-cover"
+              className="w-full h-50 rounded-2xl object-cover"
             />
             <div className="p-4">
               <h2 className="text-2xl font-bold mb-2 text-gray-800">
@@ -36,9 +37,9 @@ const Services = async() => {
             
 
             <div className="justify-end flex ">
-                  <button className="text-[#FF3811]">
+                  <Link href={`/Services/${item._id}`} className="text-[#FF3811]">
                 <GrLinkNext size={25}/>
-              </button>
+              </Link>
             </div>
             </div>
           </div>
