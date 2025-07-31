@@ -4,8 +4,8 @@ import HeroBanner from "./Components/HeroBanner";
 
 export default function Home() {
   return (
-    <>
+    <div>
     <HeroBanner/>
-    <Services/></>
+    <Services/></div>
   );
 }

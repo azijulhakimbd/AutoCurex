@@ -66,7 +66,7 @@ const HeroBanner = () => {
   const currentSlide = slides[current];
 
   return (
-    <div className="mx-6 md:mx-24 py-10">
+    <div className="mx-6 md:mx-24">
       <section className="relative mx-auto w-full max-w-[1140px] h-[600px] rounded-xl overflow-hidden">
         <div className="relative w-full h-full">
           <AnimatePresence>

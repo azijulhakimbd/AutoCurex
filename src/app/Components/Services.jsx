@@ -9,7 +9,7 @@ const Services = async() => {
   const data = await serviceCollection.find({}).toArray()
 
   return (
-    <div className=" py-10 mx-auto w-[1140px] h-[600px]">
+    <div className=" py-10 mx-auto w-[1140px]">
       <h6 className="text-[#FF3811] font-bold text-center">Service</h6>
       <h1 className="text-4xl font-bold text-center">Our Service Area</h1>
       <p className="text-center">
