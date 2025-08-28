@@ -54,6 +54,6 @@ https://auto-curex.vercel.app/
 
 To run or customize this project:
 
-1. **Clone the repository** (update the URL if needed):
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/azijulhakimbd/auto-curex.git
